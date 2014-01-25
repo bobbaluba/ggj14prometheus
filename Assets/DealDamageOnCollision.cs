@@ -10,4 +10,11 @@ public class DealDamageOnCollision : MonoBehaviour {
 			damagable.DealDamage(power);
 		}
 	}
+
+	void OnTriggerEnter2D(Collider2D other){
+		var damagable = other.gameObject.GetComponentInParents<Damagable> ();
+		if (damagable) {
+			damagable.DealDamage(power);
+		}
+	}
 }

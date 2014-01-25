@@ -24,22 +24,18 @@ public class MainCamera : MonoBehaviour {
 
 		var cameraWidth = camera.orthographicSize * camera.aspect;
 		var cameraOffsetX =  cameraWidth * cameraOffsetRatio * currentDirection * -1;
-		var cameraOffset = cameraOffsetX*Vector3.right;
 
 		var dirChangeOffsetX =  cameraWidth * directionChangeOffsetRatio * currentDirection * -1;
-		var dirChangeOffset = cameraOffsetX*Vector3.right;
 
 		var targetOffsetX = targetPos.x - curPos.x;
 
 		//change direction if needed
 		if (currentDirection > 0) {
 			if(targetOffsetX<dirChangeOffsetX){
-				Debug.Log("Changing to left");
 				currentDirection = -1;
 			}
 		} else {
 			if(targetOffsetX>dirChangeOffsetX){
-				Debug.Log("Changing to right");
 				currentDirection = 1;
 			}
 		}
