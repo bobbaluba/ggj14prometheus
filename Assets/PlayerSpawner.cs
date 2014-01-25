@@ -5,6 +5,7 @@ public class PlayerSpawner : MonoBehaviour {
 
 	public int playersAlive = 1;
 	public GameObject playerPrefab;
+	public float respawnDelay = 0.5F;
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +15,13 @@ public class PlayerSpawner : MonoBehaviour {
 
 	private void OnPlayerDied(){
 		playersAlive--;
-		SpawnPlayerIfDead();
+
+		StartCoroutine (WaitBeforeSpawning(respawnDelay));
+	}
+
+	private IEnumerator WaitBeforeSpawning(float seconds){
+		yield return new WaitForSeconds (seconds);
+		SpawnPlayerIfDead ();
 	}
 
 	private void SpawnPlayerIfDead(){

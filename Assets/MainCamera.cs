@@ -18,6 +18,7 @@ public class MainCamera : MonoBehaviour {
 	}
 
 	void Update(){
+		if (target == null)return;
 		var curPos = transform.position;
 		var targetPos = target.transform.position;
 
