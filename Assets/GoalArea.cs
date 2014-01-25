@@ -6,10 +6,10 @@ public class GoalArea : MonoBehaviour {
 	public float delayBeforeLoading = 5;
 	[System.NonSerialized]
 	public bool victory = false;
+	public GameObject[] activateOnVictory;
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (!victory) {
-			victory = true;
 			if (other.gameObject.GetComponentInParents<Player> ()) {
 				StartCoroutine(DoVictoryStuff());
 			}
@@ -18,7 +18,11 @@ public class GoalArea : MonoBehaviour {
 	}
 
 	IEnumerator DoVictoryStuff(){
+		victory = true;
 		Debug.Log ("Victory!");
+		foreach(var g in activateOnVictory){
+			g.SetActive(true);
+		}
 		yield return new WaitForSeconds (delayBeforeLoading);
 		Application.LoadLevel (nextScene);
 	}
