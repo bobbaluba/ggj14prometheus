@@ -195,6 +195,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 43fc0bea2c5dee2498d6f4c1cedb6a63, type: 2}
+      propertyPath: nextScene
+      value: forrest
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 43fc0bea2c5dee2498d6f4c1cedb6a63, type: 2}
   m_RootGameObject: {fileID: 78618857}
@@ -3928,7 +3932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1dfd4042a478964f9e3fe53a600932e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: credits
+  nextScene: forrest
   delayBeforeLoading: 5
   activateOnVictory:
   - {fileID: 1565919592}
