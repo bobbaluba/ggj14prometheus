@@ -12,7 +12,11 @@ public class KillCountText : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		text.text = "Deaths: "+deathCounter;
+		if (deathCounter > 0) {
+				text.text = "Deaths: " + deathCounter;
+		} else {
+				text.text = "";
+		}
 	}
 
 	private void OnPlayerDied(){
