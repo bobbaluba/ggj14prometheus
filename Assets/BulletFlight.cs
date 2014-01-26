@@ -11,7 +11,7 @@ public class BulletFlight : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		rigidbody2D.velocity = velocity.To3D ();
+		rigidbody2D.velocity = transform.TransformDirection (velocity.To3D ());
 
 		//gameObject.constantForce.force.Set (xPow, yPow, zPow);
 	
