@@ -8,10 +8,18 @@ public class CreditsText : MonoBehaviour {
 		var mesh = GetComponent<TextMesh>();
 		var creditsText = "";
 		//creditsText += "Developers:\n";
+
 		creditsText += "Sindre Næss\n";
 		creditsText += "Johan Helsing\n";
 		creditsText += "\nMusic:\n";
 		creditsText += "Chris Zabriskie\n";// - \nThe Temperature of the Air on the Bow of the Kaleetan\n";
+
+		
+		var deathsObject = FindObjectOfType<TotalDeathCounter>();
+		if(deathsObject){
+			creditsText += "\nTotal deaths: "+deathsObject.deaths+"\n";
+		}
+
 		mesh.text = creditsText;
 	
 	}
