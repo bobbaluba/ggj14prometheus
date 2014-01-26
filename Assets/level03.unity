@@ -86,7 +86,7 @@ GameObject:
   - 102: {fileID: 38294631}
   - 114: {fileID: 38294630}
   m_Layer: 0
-  m_Name: New Text
+  m_Name: Death Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,7 +124,7 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 430095378}
   m_GameObject: {fileID: 38294628}
-  m_Text: This is death counter
+  m_Text: Leaps of faith
   m_OffsetZ: 0
   m_CharacterSize: .200000003
   m_LineSpacing: 1
@@ -1923,6 +1923,14 @@ Prefab:
     - target: {fileID: 400002, guid: 3d54c4f34bce1504bb6f9252daf7abdc, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10200000, guid: 3d54c4f34bce1504bb6f9252daf7abdc, type: 2}
+      propertyPath: m_Text
+      value: Leaps of faith
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 3d54c4f34bce1504bb6f9252daf7abdc, type: 2}
+      propertyPath: m_UseLightProbes
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d54c4f34bce1504bb6f9252daf7abdc, type: 2}
