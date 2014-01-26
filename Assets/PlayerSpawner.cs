@@ -12,10 +12,12 @@ public class PlayerSpawner : MonoBehaviour {
 		Messenger.AddListener(Events.PlayerDied, OnPlayerDied);
 		SpawnPlayerIfDead();
 	}
+	void OnDestroy(){
+		Messenger.RemoveListener(Events.PlayerDied, OnPlayerDied);
+	}
 
 	private void OnPlayerDied(){
 		playersAlive--;
-
 		StartCoroutine (WaitBeforeSpawning(respawnDelay));
 	}
 	

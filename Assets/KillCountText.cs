@@ -9,6 +9,9 @@ public class KillCountText : MonoBehaviour {
 		Messenger.AddListener(Events.PlayerDied, OnPlayerDied);
 		text = GetComponent<TextMesh> ();
 	}
+	void OnDestroy(){
+		Messenger.RemoveListener(Events.PlayerDied, OnPlayerDied);
+	}
 	
 	// Update is called once per frame
 	void Update () {
