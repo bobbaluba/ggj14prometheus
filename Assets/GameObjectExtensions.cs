@@ -49,4 +49,9 @@ public static class GameObjectExtensions {
 	public static void SetYVelocity(this Rigidbody2D rb, float yv){
 		rb.velocity = (new Vector2(rb.velocity.y, yv));
 	}
+
+	public static void AddTorqueAtPosition(this Rigidbody2D rb, float torque, Vector2 pos){
+		rb.AddForceAtPosition(new Vector2(-torque/2F, 0), new Vector2(0,1));
+		rb.AddForceAtPosition(new Vector2(torque/2F, 0), new Vector2(0, -1));
+	}
 }
