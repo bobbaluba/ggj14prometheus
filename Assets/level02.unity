@@ -86,7 +86,7 @@ GameObject:
   - 102: {fileID: 38294631}
   - 114: {fileID: 38294630}
   m_Layer: 0
-  m_Name: New Text
+  m_Name: Death Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,7 +124,7 @@ TextMesh:
     type: 2}
   m_PrefabInternal: {fileID: 430095378}
   m_GameObject: {fileID: 38294628}
-  m_Text: This is death counter
+  m_Text: Jump
   m_OffsetZ: 0
   m_CharacterSize: .200000003
   m_LineSpacing: 1
@@ -381,7 +381,7 @@ GameObject:
   m_Layer: 0
   m_Name: GoalArea
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1203168336, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1120,6 +1120,10 @@ Prefab:
     - target: {fileID: 400002, guid: 3d54c4f34bce1504bb6f9252daf7abdc, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10200000, guid: 3d54c4f34bce1504bb6f9252daf7abdc, type: 2}
+      propertyPath: m_Text
+      value: Jump
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3d54c4f34bce1504bb6f9252daf7abdc, type: 2}
@@ -2710,6 +2714,7 @@ GameObject:
   - 114: {fileID: 590187782}
   - 58: {fileID: 590187781}
   - 114: {fileID: 590187780}
+  - 82: {fileID: 590187783}
   m_Layer: 0
   m_Name: Grinder
   m_TagString: Untagged
@@ -2756,8 +2761,8 @@ CircleCollider2D:
   m_PrefabInternal: {fileID: 358353887}
   m_GameObject: {fileID: 590187778}
   m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_Material: {fileID: 6200000, guid: 5ab39a689c2719f4a934c2f558c3c30c, type: 2}
+  m_IsTrigger: 0
   m_Radius: .600000024
   m_Center: {x: 0, y: 0}
 --- !u!114 &590187782
@@ -2773,6 +2778,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 1000
+--- !u!82 &590187783
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8200000, guid: f83f7ef25efa92742963eaee8f0fd5d2,
+    type: 2}
+  m_PrefabInternal: {fileID: 358353887}
+  m_GameObject: {fileID: 590187778}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: f72496bba2167ee4b83f43a31eaf021c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &610625342
 GameObject:
   m_ObjectHideFlags: 0
@@ -2784,6 +2848,7 @@ GameObject:
   - 114: {fileID: 610625346}
   - 58: {fileID: 610625345}
   - 114: {fileID: 610625344}
+  - 82: {fileID: 610625347}
   m_Layer: 0
   m_Name: Grinder
   m_TagString: Untagged
@@ -2830,8 +2895,8 @@ CircleCollider2D:
   m_PrefabInternal: {fileID: 1878293544}
   m_GameObject: {fileID: 610625342}
   m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_Material: {fileID: 6200000, guid: 5ab39a689c2719f4a934c2f558c3c30c, type: 2}
+  m_IsTrigger: 0
   m_Radius: .600000024
   m_Center: {x: 0, y: 0}
 --- !u!114 &610625346
@@ -2847,6 +2912,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 1000
+--- !u!82 &610625347
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8200000, guid: f83f7ef25efa92742963eaee8f0fd5d2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1878293544}
+  m_GameObject: {fileID: 610625342}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: f72496bba2167ee4b83f43a31eaf021c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &679782177
 GameObject:
   m_ObjectHideFlags: 0
@@ -3762,6 +3886,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 905572809}
+  - {fileID: 1651310123}
   m_Father: {fileID: 0}
 --- !u!1 &976621583
 GameObject:
@@ -3935,6 +4060,7 @@ GameObject:
   - 114: {fileID: 1028495811}
   - 58: {fileID: 1028495810}
   - 114: {fileID: 1028495809}
+  - 82: {fileID: 1028495812}
   m_Layer: 0
   m_Name: Grinder
   m_TagString: Untagged
@@ -3981,8 +4107,8 @@ CircleCollider2D:
   m_PrefabInternal: {fileID: 492605391}
   m_GameObject: {fileID: 1028495807}
   m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_Material: {fileID: 6200000, guid: 5ab39a689c2719f4a934c2f558c3c30c, type: 2}
+  m_IsTrigger: 0
   m_Radius: .600000024
   m_Center: {x: 0, y: 0}
 --- !u!114 &1028495811
@@ -3998,6 +4124,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 1000
+--- !u!82 &1028495812
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8200000, guid: f83f7ef25efa92742963eaee8f0fd5d2,
+    type: 2}
+  m_PrefabInternal: {fileID: 492605391}
+  m_GameObject: {fileID: 1028495807}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: f72496bba2167ee4b83f43a31eaf021c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1066421677
 GameObject:
   m_ObjectHideFlags: 0
@@ -4485,6 +4670,7 @@ GameObject:
   - 114: {fileID: 1183319809}
   - 58: {fileID: 1183319808}
   - 114: {fileID: 1183319807}
+  - 82: {fileID: 1183319811}
   m_Layer: 0
   m_Name: Grinder
   m_TagString: Untagged
@@ -4513,8 +4699,8 @@ CircleCollider2D:
   m_PrefabInternal: {fileID: 506153693}
   m_GameObject: {fileID: 1183319806}
   m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_Material: {fileID: 6200000, guid: 5ab39a689c2719f4a934c2f558c3c30c, type: 2}
+  m_IsTrigger: 0
   m_Radius: .600000024
   m_Center: {x: 0, y: 0}
 --- !u!114 &1183319809
@@ -4548,6 +4734,65 @@ Transform:
   - {fileID: 1825645918}
   - {fileID: 1721459582}
   m_Father: {fileID: 0}
+--- !u!82 &1183319811
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8200000, guid: f83f7ef25efa92742963eaee8f0fd5d2,
+    type: 2}
+  m_PrefabInternal: {fileID: 506153693}
+  m_GameObject: {fileID: 1183319806}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: f72496bba2167ee4b83f43a31eaf021c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1227361428
 GameObject:
   m_ObjectHideFlags: 0
@@ -4559,6 +4804,7 @@ GameObject:
   - 114: {fileID: 1227361432}
   - 58: {fileID: 1227361431}
   - 114: {fileID: 1227361430}
+  - 82: {fileID: 1227361433}
   m_Layer: 0
   m_Name: Grinder
   m_TagString: Untagged
@@ -4605,8 +4851,8 @@ CircleCollider2D:
   m_PrefabInternal: {fileID: 1647814850}
   m_GameObject: {fileID: 1227361428}
   m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_Material: {fileID: 6200000, guid: 5ab39a689c2719f4a934c2f558c3c30c, type: 2}
+  m_IsTrigger: 0
   m_Radius: .600000024
   m_Center: {x: 0, y: 0}
 --- !u!114 &1227361432
@@ -4622,6 +4868,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 1000
+--- !u!82 &1227361433
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8200000, guid: f83f7ef25efa92742963eaee8f0fd5d2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1647814850}
+  m_GameObject: {fileID: 1227361428}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: f72496bba2167ee4b83f43a31eaf021c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1253211131
 GameObject:
   m_ObjectHideFlags: 0
@@ -5119,6 +5424,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1565919593}
+  - 82: {fileID: 1565919594}
   m_Layer: 0
   m_Name: Flames
   m_TagString: Untagged
@@ -5139,6 +5445,65 @@ Transform:
   - {fileID: 434906781}
   - {fileID: 1773069586}
   m_Father: {fileID: 78618858}
+--- !u!82 &1565919594
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8200000, guid: 43fc0bea2c5dee2498d6f4c1cedb6a63,
+    type: 2}
+  m_PrefabInternal: {fileID: 45210071}
+  m_GameObject: {fileID: 1565919592}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: ed163b3f59c9dc04d8e459e0d5625975, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1603944812
 GameObject:
   m_ObjectHideFlags: 0
@@ -5332,6 +5697,48 @@ Prefab:
   m_RootGameObject: {fileID: 1227361428}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1651310121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100004, guid: 14633e9371f20e14497e74f84a1269f7, type: 2}
+  m_PrefabInternal: {fileID: 493804735}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1651310123}
+  - 114: {fileID: 1651310122}
+  m_Layer: 0
+  m_Name: SoundEffectPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1651310122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400002, guid: 14633e9371f20e14497e74f84a1269f7,
+    type: 2}
+  m_PrefabInternal: {fileID: 493804735}
+  m_GameObject: {fileID: 1651310121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 225f76e462da500458553f62624d3ae7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dieSound:
+    soundFile: {fileID: 8300000, guid: 6e2a587727ecd8c4598cf74f74769303, type: 3}
+    volume: 1
+--- !u!4 &1651310123
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400004, guid: 14633e9371f20e14497e74f84a1269f7, type: 2}
+  m_PrefabInternal: {fileID: 493804735}
+  m_GameObject: {fileID: 1651310121}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.322972924, y: .297771215, z: -.756103516}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 975842598}
 --- !u!1 &1721459581
 GameObject:
   m_ObjectHideFlags: 0
