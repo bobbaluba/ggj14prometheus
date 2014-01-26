@@ -17,8 +17,6 @@ public class KillCountText : MonoBehaviour {
 	void Update () {
 		if (deathCounter > 0) {
 				text.text = "Deaths: " + deathCounter;
-		} else {
-				text.text = "";
 		}
 	}
 
