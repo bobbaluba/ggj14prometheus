@@ -18,6 +18,7 @@ public class PlayerSpawner : MonoBehaviour {
 
 		StartCoroutine (WaitBeforeSpawning(respawnDelay));
 	}
+	
 
 	private IEnumerator WaitBeforeSpawning(float seconds){
 		yield return new WaitForSeconds (seconds);
