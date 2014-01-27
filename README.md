@@ -1,6 +1,8 @@
 # Prometheus
 
-Bring light to the world by dying repeatedly in the dark.
+A game about bringing light to the world by dying repeatedly in the dark.
+
+![screnshot](prometheus.png)
 
 ## Download
 
