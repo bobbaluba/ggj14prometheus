@@ -22,7 +22,7 @@ public class MainCamera : MonoBehaviour {
 		var curPos = transform.position;
 		var targetPos = target.transform.position;
 
-		var cameraWidth = camera.orthographicSize * camera.aspect;
+		var cameraWidth = GetComponent<Camera>().orthographicSize * GetComponent<Camera>().aspect;
 		var cameraOffsetX =  cameraWidth * cameraOffsetRatio * currentDirection * -1;
 
 		var dirChangeOffsetX =  cameraWidth * directionChangeOffsetRatio * currentDirection * -1;

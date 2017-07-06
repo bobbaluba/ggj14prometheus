@@ -10,27 +10,27 @@ public class FadeInLight : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		goalRange = light.range;
-		light.range = 0;
-		goalIntensity = light.intensity;
-		light.intensity = 0;
+		goalRange = GetComponent<Light>().range;
+		GetComponent<Light>().range = 0;
+		goalIntensity = GetComponent<Light>().intensity;
+		GetComponent<Light>().intensity = 0;
 		StartCoroutine(FadeInIntensity());
 		StartCoroutine(FadeInRange());
 	}
 
 	IEnumerator FadeInIntensity(){
 		for(float time = 0; time < intensityAnimation.length; time += Time.deltaTime){
-			light.intensity = goalIntensity * intensityAnimation.Evaluate(time);
+			GetComponent<Light>().intensity = goalIntensity * intensityAnimation.Evaluate(time);
 			yield return null;
 		}
-		light.intensity = goalIntensity;
+		GetComponent<Light>().intensity = goalIntensity;
 	}
 
 	IEnumerator FadeInRange(){
 		for(float time = 0; time < rangeAnimation.length; time += Time.deltaTime){
-			light.range = goalRange * rangeAnimation.Evaluate(time);
+			GetComponent<Light>().range = goalRange * rangeAnimation.Evaluate(time);
 			yield return null;
 		}
-		light.range = goalRange;
+		GetComponent<Light>().range = goalRange;
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class GoalArea : MonoBehaviour {
@@ -24,6 +25,6 @@ public class GoalArea : MonoBehaviour {
 			g.SetActive(true);
 		}
 		yield return new WaitForSeconds (delayBeforeLoading);
-		Application.LoadLevel (nextScene);
+		SceneManager.LoadScene(nextScene);
 	}
 }

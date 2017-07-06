@@ -6,6 +6,6 @@ public class ApplyConstantForce : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		rigidbody2D.AddForce (force);
+		GetComponent<Rigidbody2D>().AddForce (force);
 	}
 }

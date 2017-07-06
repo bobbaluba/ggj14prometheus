@@ -18,7 +18,7 @@ public class Player : MonoBehaviour {
 	}
 	void DoHorizontalMovement(){
 		float horizontal = Input.GetAxis("Horizontal");
-		var rb = gameObject.rigidbody2D;
+		var rb = gameObject.GetComponent<Rigidbody2D>();
 		var xspeed = rb.velocity.x;
 		if(horizontal!=0){
 			if(rb.velocity == Vector2.zero){
@@ -36,8 +36,8 @@ public class Player : MonoBehaviour {
 	}
 
 	void Jump(){
-		Vector2 vel = rigidbody2D.velocity;
-		rigidbody2D.velocity = vel + (transform.up * jumpVelocity).To2D();
+		Vector2 vel = GetComponent<Rigidbody2D>().velocity;
+		GetComponent<Rigidbody2D>().velocity = vel + (transform.up * jumpVelocity).To2D();
 		grounded = false;
 	}
 
