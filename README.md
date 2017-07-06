@@ -4,10 +4,10 @@ A game about bringing light to the world by dying repeatedly in the dark.
 
 ![screnshot](prometheus.png)
 
-## Download
+## Download / Play
 
-* The game can be downloaded for Linux, OS X and Windows [here](http://folk.ntnu.no/johanklo/prometheus/download).
-* The game can also be played online through the Unity Web Player [here](http://folk.ntnu.no/johanklo/prometheus).
+* The game can be played online [here](https://johan.helsing.priv.no/games/prometheus/play).
+* The game can be downloaded for Linux, OS X and Windows [here](https://johan.helsing.priv.no/).
 
 ## Authors
 
