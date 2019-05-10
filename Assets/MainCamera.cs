@@ -12,8 +12,11 @@ public class MainCamera : MonoBehaviour {
 	void Start(){
 		Messenger.AddListener<GameObject>(Events.PlayerSpawned, OnPlayerSpawned);
 		goalPosition = transform.position.To2D ();
-		if (target == null) {
-			target = FindObjectOfType<Player>().transform;
+		if (!target) {
+			var player = FindObjectOfType<Player>();
+			if (player) {
+				target = player.transform;
+			}
 		}
 	}
 
